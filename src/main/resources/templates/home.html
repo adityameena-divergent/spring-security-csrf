@@ -1,0 +1,19 @@
+
+<html xmlns:th="http://ww.thymeleaf.com">
+<head>
+<title>Home</title>
+</head>
+<body>
+
+	<h1>Home Page</h1>
+	<br>
+	<form action="/save" method="post">
+	
+		<input name="uname" /> <br>
+		<input type="hidden" th:name=${_csrf.parameterName} th:value=${_csrf.token} />
+		<input type="submit" value="Save Record" />
+	
+	</form>
+
+</body>
+</html>
